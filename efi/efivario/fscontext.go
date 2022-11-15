@@ -29,7 +29,7 @@ import (
 	"github.com/spf13/afero"
 	"go.uber.org/multierr"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efiguid"
 )
 
 var nameRegex = regexp.MustCompile(`^([^-]+)-([\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12})$`)

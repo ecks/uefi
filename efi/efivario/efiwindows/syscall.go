@@ -17,7 +17,7 @@
 package efiwindows
 
 import (
-	"github.com/0x5a17ed/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efiguid"
 )
 
 //sys	GetFirmwareEnvironmentVariableEx(lpName *uint16, lpGuid *uint16, buf []byte, attrs *uint32) (n uint32, err error) = kernel32.GetFirmwareEnvironmentVariableExW

@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/0x5a17ed/uefi/efi/efihex"
+	"github.com/ecks/uefi/efi/efihex"
 )
 
 var (

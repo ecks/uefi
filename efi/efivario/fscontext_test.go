@@ -24,8 +24,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
-	"github.com/0x5a17ed/uefi/efi/efivario/dirtest"
+	"github.com/ecks/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efivario/dirtest"
 )
 
 var testGuid = efiguid.MustFromString("3cd99f3f-4b2b-43eb-ac29-f0890a4772b7")

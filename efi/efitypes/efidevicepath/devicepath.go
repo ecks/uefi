@@ -22,7 +22,7 @@ import (
 	"github.com/0x5a17ed/itkit"
 	"github.com/0x5a17ed/itkit/iters/sliceit"
 
-	"github.com/0x5a17ed/uefi/efi/efireader"
+	"github.com/ecks/uefi/efi/efireader"
 )
 
 // DevicePathType is used in Head to distinguish individual

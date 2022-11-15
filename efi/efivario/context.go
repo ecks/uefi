@@ -20,7 +20,7 @@ import (
 
 	"github.com/0x5a17ed/itkit"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efiguid"
 )
 
 var (

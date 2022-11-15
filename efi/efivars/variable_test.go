@@ -28,8 +28,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/multierr"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
-	"github.com/0x5a17ed/uefi/efi/efivario"
+	"github.com/ecks/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efivario"
 )
 
 var testGuid = efiguid.MustFromString("3cd99f3f-4b2b-43eb-ac29-f0890a4772b7")

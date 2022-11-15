@@ -26,7 +26,7 @@ import (
 	requirePkg "github.com/stretchr/testify/require"
 	"gotest.tools/v3/golden"
 
-	"github.com/0x5a17ed/uefi/efi/efitypes"
+	"github.com/ecks/uefi/efi/efitypes"
 )
 
 func readHexdump(r io.Reader) ([]byte, error) {

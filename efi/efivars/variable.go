@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
-	"github.com/0x5a17ed/uefi/efi/efivario"
+	"github.com/ecks/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efivario"
 )
 
 const (

@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/0x5a17ed/uefi/efi/efireader"
+	"github.com/ecks/uefi/efi/efireader"
 )
 
 const (

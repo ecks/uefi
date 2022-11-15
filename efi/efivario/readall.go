@@ -17,7 +17,7 @@ package efivario
 import (
 	"errors"
 
-	"github.com/0x5a17ed/uefi/efi/efiguid"
+	"github.com/ecks/uefi/efi/efiguid"
 )
 
 func ReadAll(c Context, name string, guid efiguid.GUID) (
