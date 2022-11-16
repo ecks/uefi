@@ -17,6 +17,7 @@ package efidevicepath
 import (
 	"fmt"
 	"io"
+	"strings"
 
 	"github.com/ecks/uefi/efi/efihex"
 	"github.com/ecks/uefi/efi/efireader"
@@ -60,18 +61,15 @@ func (p *UnrecognizedDevicePath) GetHead() *Head {
 func (p *UnrecognizedDevicePath) Text() string {
 	if p.Head.Is(MessagingType, 11) {
 		return fmt.Sprintf(
-			"{%d,%d,%s}",
-			p.Head.Type,
-			p.Head.SubType,
-			efihex.EncodeToString(p.Data),
+			"MAC(%s,%v)",
+			strings.Trim(efihex.EncodeToString(p.Data), "0"),
+			p.Data[36],
 		)
 	}
 
 	if p.Head.Is(MessagingType, 24) {
 		return fmt.Sprintf(
-			"{%d,%d,%s}",
-			p.Head.Type,
-			p.Head.SubType,
+			"Uri(%s)",
 			efireader.ASCIIZBytesToString(p.Data),
 		)
 	}
