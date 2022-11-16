@@ -60,16 +60,16 @@ func (p *UnrecognizedDevicePath) GetHead() *Head {
 func (p *UnrecognizedDevicePath) Text() string {
 	if p.Head.Is(MessagingType, 11) {
 		return fmt.Sprintf(
-			"Path(%d,%d,%s)",
+			"{%d,%d,%s}",
 			p.Head.Type,
 			p.Head.SubType,
-			efireader.UTF16ZBytesToString(p.Data),
+			efihex.EncodeToString(p.Data),
 		)
 	}
 
 	if p.Head.Is(MessagingType, 24) {
 		return fmt.Sprintf(
-			"Path(%d,%d,%s)",
+			"{%d,%d,%s}",
 			p.Head.Type,
 			p.Head.SubType,
 			efireader.UTF16ZBytesToString(p.Data),
