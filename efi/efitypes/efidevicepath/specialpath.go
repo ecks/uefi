@@ -72,7 +72,7 @@ func (p *UnrecognizedDevicePath) Text() string {
 			"{%d,%d,%s}",
 			p.Head.Type,
 			p.Head.SubType,
-			efireader.UTF16ZBytesToString(p.Data),
+			efireader.ASCIIZBytesToString(p.Data),
 		)
 	}
 
