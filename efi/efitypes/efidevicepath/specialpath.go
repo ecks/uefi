@@ -19,6 +19,7 @@ import (
 	"io"
 
 	"github.com/ecks/uefi/efi/efihex"
+	"github.com/ecks/uefi/efi/efireader"
 )
 
 // EndOfPath terminates a Device Path.
@@ -57,6 +58,24 @@ func (p *UnrecognizedDevicePath) GetHead() *Head {
 }
 
 func (p *UnrecognizedDevicePath) Text() string {
+	if p.Head.Is(MessagingType, 11) {
+		return fmt.Sprintf(
+			"Path(%d,%d,%s)",
+			p.Head.Type,
+			p.Head.SubType,
+			efireader.UTF16ZBytesToString(p.Data),
+		)
+	}
+
+	if p.Head.Is(MessagingType, 24) {
+		return fmt.Sprintf(
+			"Path(%d,%d,%s)",
+			p.Head.Type,
+			p.Head.SubType,
+			efireader.UTF16ZBytesToString(p.Data),
+		)
+	}
+
 	return fmt.Sprintf(
 		"Path(%d,%d,%s)",
 		p.Head.Type,
