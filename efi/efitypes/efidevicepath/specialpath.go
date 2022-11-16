@@ -63,7 +63,7 @@ func (p *UnrecognizedDevicePath) Text() string {
 		return fmt.Sprintf(
 			"MAC(%s,%v)",
 			strings.Trim(efihex.EncodeToString(p.Data), "0"),
-			p.Data[36],
+			p.Data[36-4],
 		)
 	}
 
